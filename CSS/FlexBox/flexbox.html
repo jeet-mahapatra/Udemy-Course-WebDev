@@ -1,0 +1,34 @@
+<html>
+<head>
+    <style>
+    .flex-container {
+        display: flex;
+        height: 400px;
+        /* flex-wrap: wrap; */
+        justify-content: space-between;
+        align-items: flex-end;
+        
+        background-color: #32a852;
+    }
+    .flex-container div {
+        background-color: #c9d1cb;
+        margin: 70px;
+        padding: 10px;
+        
+    }
+    @media (max-width: 600px) {
+        .flex-container {
+            flex-direction: column;
+        }
+    }
+    </style>
+</head>
+<body>
+    <h2>Responsive Flexbox</h2>
+    <div class="flex-container">
+        <div>Item1</div>
+        <div>Item2</div>
+        <div>Item3</div>
+    </div>
+</body>
+</html>

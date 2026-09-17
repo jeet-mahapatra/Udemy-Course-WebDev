@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            
+        }
+        .container{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(229, 229, 163);
+            
+        }
+        .profile{
+            height: 500px;
+            width: 400px;
+            border: 1px solid black; 
+            border-radius: 5%;
+            background-color: #f1dede;
+            display: grid;
+            grid-template-rows: 1.8fr 2fr 1fr ;
+            
+        }
+        .upper {
+            border: 2px solid blue;
+            background-color: blue;
+            border-radius: 20px 20px 0 0 ;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            
+        }
+        /* For fontAwsome */
+        .circle {
+            border: 2px solid blue;
+            background-color: #fff;
+            height: 130px;
+            width: 130px;
+            border-radius: 50%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .circle i{
+            font-size: 132px;
+        }
+
+        /* For Avatar Image */
+        .circle {
+            border: 2px solid blue;
+            background-color: #fff;
+            height: 130px;
+            width: 130px;
+            border-radius: 50%;  
+            overflow: hidden;
+        }
+
+        .circle img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .middle , .headings {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .des{
+            margin-top: 0;
+        }
+        .icons{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+
+        }
+        .facebook , .x , .insta , .youtube {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border: 2px solid black;
+            border-radius: 50%; */
+            height: 40px;
+            width: 40px;
+            
+            
+            margin: 0;
+            padding: 0;
+        
+        }
+        .facebook i, .x i, .insta i, .youtube i{
+             font-size: 25px;
+        }
+
+        .buttons{
+            margin-top: 30px;
+            display: flex;
+            gap: 50px;
+        }
+
+        .subs , .mess{
+            padding: 15px;
+            border-radius: 30px;
+            width: 100px;
+            background-color: rgb(124, 16, 224);
+            font-weight: bold;
+            color: rgb(230, 184, 184);
+            
+        }
+
+        .subs:hover , .mess:hover{
+            background-color: rgb(67, 12, 118);
+            cursor: pointer;
+        }
+
+        .lower{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .like , .comment , .share{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+
+            margin: 0;
+            padding: 0;
+        }
+        .smicon , .text{
+
+
+            margin: 0;
+            padding: 0;
+        }
+        .smicon{
+            /* border: 1px solid black;
+            border-radius: 50%; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 25px;
+            width: 25px;
+
+            margin: 0;
+            padding: 0;
+        }
+      
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile">
+            <div class="upper">
+                <div class="circle">
+                    
+                    <!-- <i class="fa-regular fa-circle-user"></i> -->
+                    <img src="avatar.png" alt="Profile">
+                </div>
+            </div>
+            <div class="middle">
+                <div class="headings">
+                    <h2>Jeet Mahapatra</h2>
+                    <h4 class="des">Software Developer</h4>
+                </div>
+                
+                <div class="icons">
+                    <ul class="facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </ul>
+                    <ul class="x">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </ul>
+                    <ul class="insta">
+                        <i class="fa-brands fa-square-instagram"></i>
+                    </ul>
+                    <ul class="youtube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </ul>
+                </div>
+
+                <div class="buttons">
+                    <button class="subs">Subscribe</button>
+                    <button class="mess">Message</button>
+                </div>
+            </div>
+            <div class="lower">
+                <div class="like">
+                    <ul class="smicon">
+                        <i class="fa-solid fa-heart-circle-check"></i>
+                    </ul>
+                    <ul class="text">150k</ul>
+                </div>
+                <h1>|</h1>
+                <div class="comment">
+                    <ul class="smicon">
+                        <i class="fa-solid fa-comment"></i>
+                    </ul>
+                    <ul class="text">9k</ul>
+                </div>
+                <h1>|</h1>
+                <div class="share">
+                    <ul class="smicon">
+                        <i class="fa-solid fa-share"></i>
+                    </ul>
+                    <ul class="text">1.5k</ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
