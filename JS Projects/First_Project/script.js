@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function(){
         
     let tasks = JSON.parse(localStorage.getItem("tasks")) || []
     
+    
     tasks.forEach(task => {
         renderTasks(task)
     });
