@@ -44,6 +44,23 @@ document.addEventListener("DOMContentLoaded" , () =>{
         
     })
 
+    //The error is here please solve this ===============================================================
+
+    cartProducts.addEventListener("click" , (e) =>{
+        if(e.target.tagName === "BUTTON"){
+            const productId = parseInt( e.target.getAttribute("rem-id"));
+            const deleteProductIndex = cart.findIndex((p) => p.id === productId)
+            
+            if (deleteProductIndex !== -1) {
+                cart.splice(deleteProductIndex , 1)
+            }
+            saveCart();
+            location.reload(); //to refresh the webpage
+            
+        }
+        
+    })
+
     checkOutBtn.addEventListener("click" , ()=>{
         finalCheckout();
         location.reload();
@@ -63,8 +80,9 @@ document.addEventListener("DOMContentLoaded" , () =>{
             }
 
             const cartProduct = document.createElement("ul");
-            cartProduct.classList.add("product")
-            cartProduct.innerHTML = `<span>${c.name} => $${c.price.toFixed(2)}</span>`;    
+            cartProduct.classList.add("remove")
+            cartProduct.innerHTML = `<span>${c.name} => $${c.price.toFixed(2)}</span>
+            <button rem-id="${c.id}">Remove</button>`;    
             cartProducts.append(cartProduct)
             totalCost += c.price
             
