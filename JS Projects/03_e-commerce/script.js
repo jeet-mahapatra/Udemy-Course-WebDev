@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded" , () =>{
     const totalPriceDisplay = document.querySelector("#total-price")
     const checkOutBtn = document.querySelector("#checkout-btn")
 
-    const cart = JSON.parse(localStorage.getItem("cart")) || []
+    let cart = JSON.parse(localStorage.getItem("cart")) || []
 
     let totalCost = 0;
     
@@ -44,7 +44,6 @@ document.addEventListener("DOMContentLoaded" , () =>{
         
     })
 
-    //The error is here please solve this ===============================================================
 
     cartProducts.addEventListener("click" , (e) =>{
         if(e.target.tagName === "BUTTON"){
