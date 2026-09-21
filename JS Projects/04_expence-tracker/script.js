@@ -23,18 +23,17 @@ document.addEventListener("DOMContentLoaded" , ()=>{
 
         expenseNameInput.value = "";
         expenseAmountInput.value = "";
-
+        if(name === "" || amount === 0) return;
 
         const expense = {
             id : Date.now(),
             name : name,
-            amount : parseInt(amount)
+            amount : parseFloat(amount)
         }
 
         expenses.push(expense)
         saveExpense();
-        console.log(expenses);
-        
+                
         renderExpenses(expense)
 
         
