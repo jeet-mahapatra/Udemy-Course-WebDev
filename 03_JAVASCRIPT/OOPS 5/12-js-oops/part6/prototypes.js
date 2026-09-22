@@ -11,7 +11,7 @@ let genericCar = { tyres: 4 };
 
 let tesla = {
   driver: "AI",
-};
+}; 
 
 Object.setPrototypeOf(tesla, genericCar);
 
