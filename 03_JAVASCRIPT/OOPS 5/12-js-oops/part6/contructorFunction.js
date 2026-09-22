@@ -9,7 +9,7 @@ function Car(make, model) {
 }
 
 let myCar = new Car("Toyota", "Camry");
-// console.log(myCar);
+// console.log(myCar); 
 
 let myNewCar = Car("Tata", "Safari");
 // console.log(myNewCar);
