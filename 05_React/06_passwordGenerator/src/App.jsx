@@ -34,7 +34,6 @@ function App() {
     passwordRef.current?.select()
   
     window.navigator.clipboard.writeText(password)
-
   },[password])
 
 
